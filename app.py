@@ -13,10 +13,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db.init_app(app)
 
-#for rendering issue
-with app.app_context():
-    db.create_all()
-    
+#for rendering issue   
 @app.route("/add_task", methods=["POST"])
 def add_task():
     data = request.get_json()
