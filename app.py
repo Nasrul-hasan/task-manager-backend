@@ -33,7 +33,7 @@ def update_task(task_id):
     if not task:
         return jsonify({"message": "Task not found"}), 404
 
-    # শুধু যেগুলা এসেছে, সেগুলা আপডেট করো
+    
     if 'task_name' in data:
         task.task_name = data['task_name']
     if 'status' in data:
